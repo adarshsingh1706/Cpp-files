@@ -80,11 +80,11 @@ int main()
   st.push(34);
   st.push(89);
 
-  cout << st.peek() << endl;
+  // cout << st.peek() << endl;
 
-  st.pop();
+  // st.pop();
 
-  cout << st.peek() << endl;
+  // cout << st.peek() << endl;
 
   /*
     stack<int> s;
@@ -120,6 +120,9 @@ int main()
     cout << "the top of stack looks like " << s.top() << endl;
 
     */
+
+  // peek
+  cout << st.peek() << endl;
 
   return 0;
 }
