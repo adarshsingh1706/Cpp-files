@@ -25,3 +25,5 @@ class Solution
     }
     
 };
+
+//also solvable by using stack
