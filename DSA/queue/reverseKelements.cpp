@@ -36,3 +36,30 @@
 // Let the given queue be { 1, 2, 3, 4, 5 } and K be 3.
 // You need to reverse the first K integers of Queue which are 1, 2, and 3.
 // Thus, the final response will be { 3, 2, 1, 4, 5 }.
+
+
+//instead of while loop , this also works
+// #include <bits/stdc++.h> 
+// queue<int> reverseElements(queue<int> q, int k)
+// {
+//     stack<int> st;
+//     for(int i=0;i<k;i++){
+//         int num = q.front();
+//         st.push(num);
+//         q.pop();
+        
+//     }
+
+//     for(int j=0;j<k;j++){
+//         int nums = st.top();
+//         q.push(nums);
+//         st.pop();
+        
+// }
+//      for(int i=0;i<q.size()-k;i++){
+//          int res = q.front();
+//          q.push(res);
+//          q.pop();
+//      }
+//      return q;
+// }
