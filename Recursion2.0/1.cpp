@@ -285,9 +285,7 @@
 //   checkPalindrome(text, n, 0);
 // }
 
-
-
-//fibonacci => multiple recursion calls
+// fibonacci => multiple recursion calls
 
 // #include <iostream>
 // using namespace std;
@@ -312,3 +310,69 @@
 //   cout << "The Fibonacci number at position " << n << " is " << result << endl;
 // }
 
+// fibonacci series print without recursion
+
+// #include <iostream>
+// using namespace std;
+
+// void fibonacciSeries(int n)
+// {
+//   int first = 0;
+//   int second = 1;
+//   int next;
+
+//   for (int i = 0; i < n; i++)
+//   {
+//     if (i <= 1)
+//       next = i;
+//     else
+//     {
+//       next = first + second;
+//       first = second;
+//       second = next;
+//     }
+//     cout << next << " ";
+//   }
+// }
+
+// int main()
+// {
+//   int n;
+//   cout << "Enter n" << endl;
+//   cin >> n;
+//   fibonacciSeries(n);
+// }
+
+
+//with recursion
+
+#include <iostream>
+using namespace std;
+
+int fibonacci(int n){
+  //base case
+  if(n<=1) return n;
+
+  //Now,since for fibbbonaci(n)= f(n-1)+f(n-2);
+  int last = fibonacci(n-1);
+  int secLast = fibonacci(n-2);
+
+  return last+secLast;
+
+}
+
+
+
+int main(){
+  int n;
+  cout<<"Enter the nth number who's fibbonaci is required "<< endl;
+  cin>>n;
+  int result = fibonacci(n);
+  //printing result
+  cout << "The Fibonacci number at position " << n << " is " << result << endl;
+
+  //printing series
+  for(int i=0;i<n;i++){
+    cout<<fibonacci(i)<<" ";
+  }
+}
