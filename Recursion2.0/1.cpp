@@ -240,47 +240,75 @@
 // }
 
 // check if the given string is palindrome
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-void checkPalindrome(string text, int n, int i)
-{
-  // base case
-  if (i >= n - i - 1)
-  {
-    cout << "The given string is a palindrome" << endl;
-    return;
-  }
+// void checkPalindrome(string text, int n, int i)
+// {
+//   // base case
+//   if (i >= n - i - 1)
+//   {
+//     cout << "The given string is a palindrome" << endl;
+//     return;
+//   }
 
-  // check
+//   // check
 
-  if (text[i] == text[n - i - 1])
-  {
-    checkPalindrome(text, n, ++i);
-  }
+//   if (text[i] == text[n - i - 1])
+//   {
+//     checkPalindrome(text, n, ++i);
+//   }
 
-  else
-  {
-    cout << "Not a palindrome" << endl;
-    return;
-  }
-}
+//   else
+//   {
+//     cout << "Not a palindrome" << endl;
+//     return;
+//   }
+// }
 
-int main()
-{
-  string text;
-  int n;
-  cout << "Enter the string length" << endl;
-  cin >> n;
-  cout<<"Enter String"<<endl;
-  cin >> text;
+// int main()
+// {
+//   string text;
+//   int n;
+//   cout << "Enter the string length" << endl;
+//   cin >> n;
+//   cout<<"Enter String"<<endl;
+//   cin >> text;
 
-  // checking if entered length of string is equal to n
-  if (text.length() != n)
-  {
-    cout << "Entered length does not match the actual string length" << endl;
-    return 1;
-  }
+//   // checking if entered length of string is equal to n
+//   if (text.length() != n)
+//   {
+//     cout << "Entered length does not match the actual string length" << endl;
+//     return 1;
+//   }
 
-  checkPalindrome(text, n, 0);
-}
+//   checkPalindrome(text, n, 0);
+// }
+
+
+
+//fibonacci => multiple recursion calls
+
+// #include <iostream>
+// using namespace std;
+
+// int fibonacci(int n){
+//   //base case
+//   if(n<=1) return n;
+
+//   //Now,since for fibbbonaci(n)= f(n-1)+f(n-2);
+//   int last = fibonacci(n-1);
+//   int secLast = fibonacci(n-2);
+
+//   return last+secLast;
+
+// }
+
+// int main(){
+//   int n;
+//   cout<<"Enter the nth number who's fibbonaci is required "<< endl;
+//   cin>>n;
+//   int result = fibonacci(n);
+//   cout << "The Fibonacci number at position " << n << " is " << result << endl;
+// }
+
