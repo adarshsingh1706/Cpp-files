@@ -19,8 +19,10 @@ void printSubseq(int index, int n, int arr[], vector<int> &output)
     return;
   }
 
+  //include the current element in the subseq
   output.push_back(arr[index]); 
-  printSubseq(index + 1, n, arr, output); 
+  printSubseq(index + 1, n, arr, output);
+  //exclude the current element in the subseq 
   output.pop_back(); 
   printSubseq(index + 1, n, arr, output);
 }
