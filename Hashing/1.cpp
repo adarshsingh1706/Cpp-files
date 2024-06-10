@@ -32,7 +32,29 @@
 // return 0;
 // }
 
-//for STRING
+//for STRING---only small letters
+
+// #include <iostream>
+// using namespace std;
+// int main(){
+//   string s;
+//   cout<<"Enter string"<<endl;
+//   cin>>s;
+//   int hash[26]={0};
+//   for(int i=0;i<s.size();i++){
+//     hash[s[i]-'a']++; //eg s[i]=d then, 'd'-'a'=100-97=3 so location 3 ++
+//   }
+
+//   char ch;
+//   cout<<"Enter the char C"<<endl;
+//   cin>>ch;
+//   cout<<hash[ch-'a']<<endl;
+
+// }
+
+
+//string everything included
+
 
 #include <iostream>
 using namespace std;
@@ -40,14 +62,14 @@ int main(){
   string s;
   cout<<"Enter string"<<endl;
   cin>>s;
-  int hash[26]={0};
+  int hash[256]={0};
   for(int i=0;i<s.size();i++){
-    hash[s[i]-'a']++; //eg s[i]=d then, 'd'-'a'=100-97=3 so location 3 ++
+    hash[s[i]]++; //eg s[i]=d then, 'd'-'a'=100-97=3 so location 3 ++
   }
 
   char ch;
   cout<<"Enter the char C"<<endl;
   cin>>ch;
-  cout<<hash[ch-'a']<<endl;
+  cout<<hash[ch]<<endl;
 
 }
