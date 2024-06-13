@@ -7,9 +7,10 @@ void printSubseq(int index, int n, int arr[], vector<int> &output)
   // base case
   if (index >= n)
   {
-    if (output.size() == 0) // for showing {} in o/p
+    // for showing {} in o/p
+    if (output.size() == 0) 
       cout << "{}";
-
+//main loop
     for (int i = 0; i < output.size(); i++)
     {
       cout << output[i] << " ";
@@ -32,5 +33,5 @@ int main()
   int n = 3;
   int arr[] = {3, 2, 1};
   vector<int> output; // for storing individual subsequences
-  printSubseq(0, 3, arr, output);
+  printSubseq(0/*index*/, 3/*size*/, arr, output);
 }
