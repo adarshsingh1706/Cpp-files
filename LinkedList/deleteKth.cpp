@@ -65,13 +65,40 @@ Node* removeK(Node* head, int k){
   return head;
 }
 
+// ---------------------------------------
+//deleting by valur
+Node* removeValue(Node* head, int value){
+  if(head==NULL) return head;
+  if(head->data==value){
+    Node* temp = head;
+    head = head->next;
+    delete(temp);
+    return head;
+  }
+  Node* temp = head;
+  Node* prev = NULL;
+  while(temp!=NULL){
+  
+    if(temp->data==value){
+      prev->next= prev->next->next;
+      delete(temp);
+      break;
+    }
+    prev = temp;
+    temp=temp->next;
+  }
+  return head;
+}
 
 
 int main(){
   vector<int> arr ={17,4,5,6};
   
   Node* head = convertArr2LL(arr);
-  head=removeK(head,3);
+  // head=removeK(head,3);
+  // print(head);
+
+  head=removeValue(head,17);
   print(head);
   
 }
