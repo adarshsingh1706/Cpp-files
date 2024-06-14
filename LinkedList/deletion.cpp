@@ -1,4 +1,5 @@
 //deleting head
+//delete tail
 
 
 #include <iostream>
@@ -38,13 +39,27 @@ void print(Node* head){
     cout<<temp->data<<" ";
     temp=temp->next;
   }
+  cout<<endl;
 }
 
 //deleting head
 Node* deleteHead(Node* head){
+  if(head == NULL) return nullptr;
   Node* temp =head;
   head= head->next;
-  free(temp);
+  delete(temp);
+  return head;
+}
+
+//delete tail
+Node* deleteTail(Node* head){
+  if(head==NULL || head->next ==NULL) return NULL;
+  Node* temp = head;
+  while(temp->next->next!=nullptr){
+    temp = temp->next;
+  }
+  delete(temp->next);
+  temp->next = nullptr;
   return head;
 }
 
@@ -55,10 +70,10 @@ int main(){
   
   Node* head = convertArr2LL(arr);
   
+  // print(head);
+  // cout<<endl;
+  // head = deleteHead(head);
+  deleteTail(head);
   print(head);
-  cout<<endl;
-  head = deleteHead(head);
-  cout<<endl; 
-  print(head);
-
 }
+// The reason you need to use head = deleteHead(head); instead of just deleteHead(head); is because the deleteHead function returns a new head pointer. When you delete the head node of a linked list, the head pointer needs to be updated to point to the next node in the list. If you don't update the head pointer, it will still point to the old, deleted node, which results in incorrect behavior or potential access to freed memory.
