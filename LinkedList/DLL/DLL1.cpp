@@ -80,6 +80,25 @@ Node* removeKthElement(Node* head, int k) {
   return head;
 }
 
+void deleteNode(Node* temp) {
+ 
+  Node* prev = temp->back;
+  Node* front = temp->next;
+
+   if(front == NULL) {
+    prev->next = nullptr;
+    front->back = nullptr;
+    free(temp);
+    return;
+   }
+   prev->next = front;
+   front->back = prev;
+  
+  temp->next =nullptr;
+  temp->back = nullptr;
+  free(temp);
+}
+
 void print(Node* head) {
   while(head!=NULL) {
     cout <<head->data <<" ";
@@ -96,6 +115,9 @@ int main() {
   // print(head);
   // head = deleteTail(head);
   // print(head);
-  head = removeKthElement(head,4);
+  // head = removeKthElement(head,4);
+  // print(head);
+  deleteNode(head->next->next->next);
   print(head);
+  
 }
