@@ -159,3 +159,73 @@
 //     return newHead;
 
 // }
+
+
+//rotate LL
+//Given the head of a linked list, rotate the list to the right by k places.
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+//  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+//  * };
+//  */
+// class Solution {
+// public:
+// ListNode* nthNode(ListNode* temp,int k) {
+    
+//     int cnt=1;
+//     while(temp!=NULL) {
+//         if(cnt == k) return temp;
+//         cnt++;
+//         temp= temp->next;
+//     }
+//     return temp;
+// }
+// public:
+//     ListNode* rotateRight(ListNode* head, int k) {
+//         if(head == NULL || k==0) return head;
+//         ListNode* tail = head;
+//         int len =1;
+//         while(tail->next!=NULL) {
+//             tail = tail->next;
+//             len++;
+//         }
+
+//         if(k%len==0) return head;
+
+//         k=k%len;
+       
+//         //tail to head
+//         tail->next = head;
+//         ListNode* newLastNode = nthNode(head,len-k);
+//         head = newLastNode->next;
+//         newLastNode->next= NULL;
+//         return head;
+
+        
+//     }
+// };
+
+
+//reverse a LL without stack, by playing with links
+
+// class Solution {
+// public:
+//     ListNode* reverseList(ListNode* head) {
+//        ListNode* temp = head;
+//        ListNode* prev = nullptr;
+//        ListNode* front;
+//        while(temp!=NULL) {
+//         front = temp->next;
+//         temp->next = prev;
+//         prev = temp;
+//         temp = front;
+//        } 
+//        return prev;
+//     }
+// };
