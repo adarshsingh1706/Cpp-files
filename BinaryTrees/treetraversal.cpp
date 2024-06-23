@@ -53,3 +53,83 @@
 //     return ans;
 
 // }
+
+//iterative way ------------------------------------------------->>>>>>>
+
+// #include <bits/stdc++.h> 
+/*
+Following is the structure of Tree Node
+
+class TreeNode 
+{
+   public:
+    int val;
+    TreeNode* left;
+    TreeNode* right;
+
+    TreeNode(int val) 
+    {
+        this->val = val;
+        left = NULL;
+        right = NULL;
+    }
+};
+*/
+//*************preorder*******************
+
+// vector<int> preorderTraversal(TreeNode* root)
+// {
+//     vector<int> ans;
+//     stack<TreeNode*> st;
+//     if(root==NULL) return ans;
+//     st.push(root);
+//     while(!st.empty()) {
+//         for(int i=0;i<st.size();i++) {
+//             TreeNode* node = st.top();
+//             st.pop();
+//             if(node->right!=NULL) st.push(node->right);
+//             if(node->left!=NULL) st.push(node->left);
+//             ans.push_back(node->val);
+
+//         }
+//     }
+//     return ans;
+// }
+
+//postoder using 2 stacks***********************
+
+/*
+    Following is Binary Tree Node structure:
+    class TreeNode
+    {
+    public:
+        int data;
+        TreeNode *left, *right;
+        TreeNode() : data(0), left(NULL), right(NULL) {}
+        TreeNode(int x) : data(x), left(NULL), right(NULL) {}
+        TreeNode(int x, TreeNode *left, TreeNode *right) : data(x), left(left), right(right) {}
+    };
+*/
+// vector<int> postorderTraversal(TreeNode *root)
+// {
+//     stack<TreeNode*> st1;
+//     stack<TreeNode*> st2;
+//     vector<int> ans;
+   
+//     if(root == NULL) return ans;
+//     st1.push(root);
+//     while(!st1.empty()) {
+//         root = st1.top();
+//         st1.pop();
+//         if(root->left!=NULL) st1.push(root->left);
+//         if(root->right!=NULL) st1.push(root->right);
+//         st2.push(root);
+
+//     }
+//     while(!st2.empty()) {
+//         ans.push_back(st2.top()->data);
+//         st2.pop();
+//     }
+//     return ans;
+
+// }
