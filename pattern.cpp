@@ -65,6 +65,8 @@
 // }
 
 
+//Spiral traversal across a 2d matrix--------------------------
+
 #include <iostream>
 using namespace std;
 
@@ -118,7 +120,7 @@ int main(){
         }
     }
 
-    //print5
+    //print
       cout << "The " << n << "x" << n << " matrix with elements 1 to " << n*n << " is:" << endl;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
