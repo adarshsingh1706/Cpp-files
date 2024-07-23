@@ -8,8 +8,8 @@ vector<int> twosum(vector<int> arr, int target){
   for(int i =0;i<arr.size();i++){
     int rem  = target-arr[i];
     if(mp.find(rem)!=mp.end()){//iterator found
-      ans.push_back(i); // returning index of current ele
-      ans.push_back(mp[rem]);// index of rem
+      ans.push_back(i); 
+      ans.push_back(mp[rem]);
       return ans;
     }
     else{
