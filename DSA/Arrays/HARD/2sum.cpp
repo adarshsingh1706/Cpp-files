@@ -23,7 +23,7 @@ vector<int> twosum(vector<int> arr, int target){
 
  int main(){
     vector<int> arr ={-1,2,3,4,7};
-    int target = 5;
+    int target = 0;
     vector<int> soln = twosum(arr,target);
     for(int i=0;i<soln.size();i++){
       cout<<soln[i]<<" ";
