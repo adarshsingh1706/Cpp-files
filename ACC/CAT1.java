@@ -137,3 +137,39 @@ Write your code in this editor and press "Run" button to execute it.
 //         System.out.print("Value of x is " + findX(num,rem,size));
 //     }
 // }
+
+
+
+
+
+// import java.util.*;
+
+// public class Main {
+//     public static void main(String args[]) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter number: ");
+//         String n = sc.nextLine();
+//         if (isStrobogrammaticNumber(n)) {
+//             System.out.print(n + " is a Strobogrammatic Number");
+//         } else {
+//             System.out.print("Nope");
+//         }
+//     }
+
+//     static boolean isStrobogrammaticNumber(String n) {
+//         Map<Character, Character> map = new HashMap<>();
+//         map.put('0', '0');
+//         map.put('1', '1');
+//         map.put('6', '9');
+//         map.put('8', '8');
+//         map.put('9', '6');
+        
+//         int last = n.length() - 1;
+//         for (int i = 0, j = last; i <= j; i++, j--) {
+//             if (n.charAt(i) != map.getOrDefault(n.charAt(j), '\0')) {
+//                 return false;
+//             }
+//         }
+//         return true;
+//     }
+// }
