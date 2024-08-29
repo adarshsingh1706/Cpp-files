@@ -88,3 +88,52 @@
 //     }
 // }
 
+
+//remainder theorem
+
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+// import java.util.*;
+// public class Main{
+//     static int findX(int num[],int rem[],int k){
+//         int x =1;
+//         while(true){
+//             int j;
+//             for( j=0;j<k;j++){
+//                 if(x%num[j]!=rem[j]){
+//                     break;
+//                 }
+//             }
+            
+//             if(j==k) {
+//                 return x;
+//             }
+//             x++;
+//         }
+//     }
+    
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         System.out.println("Enter the size of relation");
+//         int size = sc.nextInt();
+//         int [] num = new int[size];
+//         int [] rem = new int[size];
+//         System.out.println("Enter the values of num");
+//         for(int i=0;i<size;i++){
+//             num[i] = sc.nextInt();
+//         }
+        
+//          System.out.println("Enter the values of rem");
+//         for(int i=0;i<size;i++){
+//             rem[i] = sc.nextInt();
+//         }
+        
+//         System.out.print("Value of x is " + findX(num,rem,size));
+//     }
+// }
