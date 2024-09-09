@@ -58,3 +58,60 @@
 //         return ans;
 //     }
 // };
+
+
+// spiralMatrix-4 +LL
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+// class Solution {
+// public:
+//     vector<vector<int>> spiralMatrix(int m, int n, ListNode* head) {
+//         vector<vector<int>> ans(m,vector<int>(n,-1));
+//         int colLeft = 0;
+//         int colRight = n-1;
+//         int rowTop = 0;
+//         int rowBottom = m-1;
+
+//         while(head!=NULL){
+//         //for L->R
+//         for(int i=colLeft;i<=colRight;i++){
+//             if(head==NULL) break;
+//             ans[rowTop][i] = head->val;
+//             head = head->next;
+//         }
+//         rowTop++;
+//         //U->D
+//         for(int i = rowTop;i<=rowBottom;i++){
+//             if(head==NULL) break;
+//             ans[i][colRight]=head->val;
+//             head = head->next;
+//         }
+//         colRight--;
+//         //R->L
+//         for(int i=colRight;i>=colLeft;i--){
+//             if(head==NULL) break;
+//             ans[rowBottom][i]=head->val;
+//             head= head->next;
+//         }
+//         rowBottom--;
+//         //D->U
+//         for(int i=rowBottom;i>=rowTop;i--){
+//             if(head==NULL) break;
+//             ans[i][colLeft]=head->val;
+//             head = head->next;
+//         }
+//         colLeft++;
+//         }
+
+//         return ans;
+//     }
+// };
