@@ -115,3 +115,43 @@
 //         return ans;
 //     }
 // };
+
+
+
+//-------------------------------------------
+// 2807. Insert Greatest Common Divisors in Linked List
+
+
+// class Solution {
+// public:
+//     int gcd(int a,int b){
+//         while(a>0 && b>0){
+//             if(a>b){
+//                 a=a%b;
+//             }
+//             else{
+//                 b=b%a;
+//             }
+//         }
+//         if(a==0) return b;
+//         return a;
+//     }
+// public:
+//     ListNode* insertGreatestCommonDivisors(ListNode* head) {
+//         ListNode* temp = head;
+//         ListNode* prev = head;
+//         if(temp->next==NULL){ //for single ele
+//             return temp;
+//         }
+//         while(temp->next!=NULL){
+//             int a =temp->val;
+//             temp=temp->next;
+//             int b =temp->val;
+//             int c =gcd(a,b);
+//             ListNode* newNode = new ListNode(c);
+//             prev->next = newNode;
+//             newNode->next=temp;
+//             prev=prev->next->next;
+//         }
+//         return head;
+//     }
