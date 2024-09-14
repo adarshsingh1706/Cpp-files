@@ -67,3 +67,35 @@
 //         else return -1;
 //     }
 // };
+
+//----------------------------------------
+
+// minimum platform
+
+
+// #include <algorithm>
+// int calculateMinPatforms(int at[], int dt[], int n) {
+//     sort(at,at+n);
+//     sort(dt,dt+n);
+
+//     int platform =1;// for initial train
+//     int ans =1;
+
+//     int i=1; int j=0;
+
+//     while(i<n && j<n){
+//         // when dep_t> arr_t
+//         if(at[i]<=dt[j]){
+//             platform++;
+//             i++;
+//         }
+//         //when arr_t>dep_t
+//         else if(at[i]>dt[j]){
+//             platform--;
+//             j++;
+//         }
+//         //storing ans if change
+//         if(platform>ans) ans = platform;
+//     }
+//     return ans;
+// }
