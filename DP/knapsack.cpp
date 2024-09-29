@@ -55,6 +55,47 @@
 //     };
 
 
+//SubsetSum Problem-------------------
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+bool subsetSum(int arr[],int sum,int n){
+  vector<vector<int>> dp(n+1,vector<int> (sum+1));
+  //initialisation of the matrix
+  for(int i=0;i<=n;i++){
+    for(int j=0;j<=sum;j++){
+      if(i==0) dp[i][j]=false;
+      else if(j==0) dp[i][j]=true;
+    }
+  }
+
+  for(int i=1;i<=n;i++){
+    for(int j=1;j<=sum;j++){
+      if(arr[i-1]<=j){
+        dp[i][j]=dp[i-1][j-arr[i-1]] || dp[i-1][j];
+      }
+      else{
+        dp[i][j] = dp[i-1][j];
+      }
+    }
+  }
+return dp[n][sum];
+}
+
+
+int main(){
+int arr[5] = {2,0,4,7,9};
+int sum = 12;
+int n=5;
+if (subsetSum(arr, sum, n)) {
+        cout << "Yes, subset with the given sum exists!" << endl;
+    } else {
+        cout << "No, subset with the given sum does not exist!" << endl;
+    }
+return 0;
+}
 
 
 
