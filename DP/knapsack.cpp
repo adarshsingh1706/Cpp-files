@@ -64,12 +64,13 @@ using namespace std;
 bool subsetSum(int arr[],int sum,int n){
   vector<vector<int>> dp(n+1,vector<int> (sum+1));
   //initialisation of the matrix
-  for(int i=0;i<=n;i++){
-    for(int j=0;j<=sum;j++){
-      if(i==0) dp[i][j]=false;
-      else if(j==0) dp[i][j]=true;
-    }
-  }
+  for(int i = 0; i <= n; i++) {
+    dp[i][0] = true;
+}
+// If no elements are chosen, no positive sum can be achieved
+for(int j = 1; j <= sum; j++) {
+    dp[0][j] = false;
+}
 
   for(int i=1;i<=n;i++){
     for(int j=1;j<=sum;j++){
